@@ -317,6 +317,8 @@ a {
     justify-content: center;
     align-items: center;
     min-height: 50vh;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .carousel-container {
