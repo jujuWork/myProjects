@@ -1,0 +1,368 @@
+/* MONSTERRAT FONT IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap');
+/* 
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal; 
+*/
+
+/* NOTO SANS JP FONT IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+/* 
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+*/
+
+
+
+:root {
+    --primary-color: #333333;
+    --secondary-color: #B6CEB4;
+    --text-primary-color: #000;
+    --text-secondary-color: #fff;
+    --hover-color: #FF4944;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    max-width: 3440px;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    background-color: #F0F0F0;
+
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-primary-color);
+}
+
+.grid-container { 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto 1fr auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "header header header header header"
+        "content content content content content"
+        "content content content content content"
+        "footer footer footer footer footer";
+    position: relative;
+}
+
+.grid-items {
+    width: 100%;
+}
+
+/********************************** NAVIGATION START **********************************/
+
+.navigation { 
+    grid-area: navigation;
+    background-color: var(--primary-color);
+    position: fixed;
+    z-index: 99999;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 8vh;
+
+    .logos {
+        background-color: #fff;
+        padding: 0 10px;
+        height: 100%;
+        width: 30vw;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        cursor: pointer;
+
+        .logos img {
+            width: 100%;
+            max-height: 100%;
+            height: auto;
+        }
+
+        .main-logo {
+            width: 15vw;
+            max-height: 100%;
+            padding: 10px 0;
+        }
+
+        .group-logo {
+            max-height: 100%;
+            width: 7vw;
+            margin-left: 10px;
+        }
+    }
+
+    .nav-list {
+        display: flex;
+        width: 70vw;
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+    }
+
+    .nav-items {
+        color: var(--text-secondary-color);
+        list-style: none;
+        height: 100%;
+        margin: 0 10px 0 0;
+        text-align: center;
+
+        
+        .en-text {
+            font-family: "Montserrat", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-size: clamp(9px, 13px, 18px)
+        }
+
+        .jp-text {
+            font-family: "Noto Sans JP", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 300;
+            font-style: normal;
+            font-size: clamp(7px, 9px, 14px);
+        }
+
+    &:hover {
+        color: var(--hover-color);
+    }
+
+    }
+
+}
+
+/********************************** NAVIGATION END **********************************/
+
+/********************************** HEADER START **********************************/
+
+.header {
+    grid-area: header;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    overflow: hidden;
+
+    .header-image-slide {
+        position: relative;
+        flex: 1;
+        z-index: -1;
+        display: flex;
+    }
+
+    .header-image-slide div > .mySlides {
+        height: 100vh;
+        width: 100vw;
+        display: none;
+        animation: fade 1sgi;
+    }
+
+    .header-icons {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 20vh;
+        
+
+        .left-icons {
+            display: flex;
+            flex-direction: column;
+            display: relative;
+            width: 100%;
+
+            .left-icon-one {
+                width: 50em;
+                margin-top: -33rem;
+                margin-left: 0;
+            }
+
+            .left-icon-two {
+                margin-top: -15rem;
+                width: 50em;
+            }
+
+            .left-icon-three {
+                margin: -5rem 0 0 10rem;
+                width: 30em;
+            }
+        }
+
+        .right-icons {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            flex-direction: column;
+            /* height: 100vh; */
+
+            .right-icon-one {
+                width: 6em;
+                display: block;
+                margin-bottom: 2rem;
+                padding-right: 10px;
+            }
+
+            .right-icon-two {
+                display: block;
+                margin-top: 1rem;
+                margin-right: -9em;
+                transition: 0.5s ease-in-out;
+                overflow: hidden;
+                cursor: pointer;
+                width: 15em;
+            }
+            
+            .right-icon-two:hover {
+                padding-right: 10px;
+                margin: 1rem 0 0 0;
+            }
+        }
+    }
+        .bottom-icons {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            position: absolute;
+            right: 0;
+            bottom: 180px;
+            width: 100%;
+            background: url('../Image/Header/icons/グループ\ 255.png') no-repeat right bottom;
+            background-size: 80%;
+            overflow: hidden;
+            white-space: nowrap;
+
+            .marquee-container {
+                display: flex;
+                white-space: nowrap;
+                width: 100%;
+                overflow: hidden;
+            }
+
+            .marquee-loop, .marquee-loop2 {
+                display: inline-flex;
+                padding-right: 1em;
+                animation: marquee 30s linear infinite;
+            }
+
+            .marquee-loop2 {
+                animation-delay: 1s;
+            }
+
+            .marquee-loop img {
+                height: 20vh;
+                width: auto;
+                display: block;
+            }
+        }
+    }
+
+@keyframes fade {
+    from {
+    opacity: 0;
+    }
+    to {
+    opacity: 1;
+    }
+    }
+
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+
+
+
+/********************************** HEADER END **********************************/
+
+
+/********************************** CONTENT START **********************************/
+.content { 
+    grid-area: content;
+    width: 100%;
+    height: 100%;
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+}
+
+.carousel-container {
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+    position: relative;
+}
+    .carousel-image-container {
+        display: flex;
+        transition: transform 0.6s ease-in-out;
+    }
+
+    .carousel-image-container img {
+        width: 50%;
+        height: 100%;
+        flex-shrink: 0;
+        display: block;
+        object-fit: fit;
+        padding: 10px 50px;
+    }
+
+    .carousel-image-container img:hover {
+        animation-play-state: paused;
+    }
+
+
+
+/********************************** CONTENT END **********************************/
+
+
+.footer { 
+    grid-area: footer;
+    background-color: turquoise;
+}
+
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        'navigation'
+        'header'
+        'content'
+        'footer'
+        ;
+    }
+}
