@@ -70,8 +70,9 @@ body {
     li:hover {
         color: var(--hover-color);
     }
+}
 
-    .btn-mem {
+    .btn-mem{
         position: relative;
         /* background-color: var(--secondary-color); */
         margin: 0 1rem;
@@ -97,11 +98,44 @@ body {
     .btn-mem:hover {
         background-position: 0 0;
     }
-}
 
 header {
-    border: 1px solid red;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     color: white;
+    position: relative;
+
 }
+
+    .hero-container {
+        border: 1px solid red;
+        width: 90%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .trainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+        .horizontal-line {
+            width: 10%;
+        }
+
+    .hero-text {
+        border: 1px solid orange;
+        margin: 1rem 0 0 1rem;
+        font-weight: 900;
+        font-size: 3rem;
+
+        p {
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+    }
