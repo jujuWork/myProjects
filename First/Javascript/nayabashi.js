@@ -55,35 +55,43 @@ function autoSlide(container) {
   let slides = container.querySelectorAll('.mySlides'); // Selecting all the class inside the container
   let slideDuration = 5000; // change the image into 5 seconds interval
 
+    // function to switch between slides
   function showSlide() {
-    let slideIndex = +container.getAttribute('data-index');
+    let slideIndex = +container.getAttribute('data-index'); // current slide number " + "
 
+      // hides all the slides
     for (let i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
       slides[i].classList.remove('active');
     }
 
+      // Looping all slides
     slideIndex++;
-
     if (slideIndex > slides.length) {
       slideIndex = 1;
     }
 
+      // shows the current slide
     slides[slideIndex - 1].style.display = 'block';
-    slides[slideIndex - 1].classList.add('active');
+    slides[slideIndex - 1].classList.add('active'); // adding the .active class for animation/styling
 
+      // saving the current slides to know where it left off
     container.setAttribute('data-index', slideIndex);
 
-    setTimeout(showSlide, slideDuration);
+    setTimeout(showSlide, slideDuration); // slide duration for 5 seconds
   }
 
-  showSlide();
+  showSlide(); // starts the slides
 }
 
+  // this part waits the webpage to load before starting the slides
 document.addEventListener('DOMContentLoaded', function() {
 
+    // selecting all the class inside the containers
   let carouselContainers = document.querySelectorAll('.header-image-slide, .news-slides-container');
 
+    // hides all slides except the first one
+    // sets the starting to slide index to 1
   carouselContainers.forEach(container => {
     let slides = container.querySelectorAll('.mySlides');
     for (let i = 1; i < slides.length; i++) {
@@ -92,6 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
     slides[0].style.display = 'block';
     container.setAttribute('data-index', 1);
 
+      // starts all the auto slide function
     autoSlide(container);
   });
 

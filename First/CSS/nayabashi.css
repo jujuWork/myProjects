@@ -166,7 +166,7 @@ a {
     height: 100vh;
     position: relative;
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     overflow: hidden;
 
     .header-image-slide {
@@ -177,20 +177,11 @@ a {
     }
 
                 /**************** IMAGE SLIDER ****************/
-    .header-image-slide .mySlides {
-        height: 100vh;
+    .header-image-slide div > .mySlides {
+        height: 100%;
         width: 100vw;
         display: none;
         animation: fade 1s ease-in-out;
-    }
-
-    .header-image-slide div:first-child .mySlides,
-    .news-slides-container div:first-child .mySlides {
-        display: block;
-    }
-
-    .mySlides:not(.active) {
-        display: none;
     }
 
     .header-icons {
@@ -351,6 +342,7 @@ a {
 
 
 .news-container {
+    margin-top: 10em;
     width: 100%;
     position: relative;
     display: flex;
@@ -395,7 +387,7 @@ a {
         width: 30%;
         position: relative;
         display: flex;
-        padding: 10px 0;
+        padding: 20px 0;
     }
 
         .news-dates {
@@ -412,6 +404,7 @@ a {
         }
 
 .bottom-center-hr {
+    margin-top: 3em;
     width: 50%;
 }
 
@@ -420,7 +413,7 @@ a {
         color: var(--text-secondary-color);
         position: absolute;
         right: 20em;
-        top: 0;
+        bottom: -2.5em;
         display: flex;
         padding: 0 10px;
         border-right: 5px solid var(--text-secondary-color);
@@ -463,6 +456,27 @@ a {
         }
 
 
+.about-container {
+    border: 1px solid orange;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+    .about-item-background {
+        width: 100%;
+        height: 50vh;
+        background: url('../Image/About/グループ\ 56.png') no-repeat center center/cover;
+    }
+        .about-item {
+            border: 1px solid red;
+            /* position: absolute;
+            top: 0;
+            left: 0; */
+            color: var(--text-secondary-color);
+        }
 /********************************** CONTENT END **********************************/
 
 
