@@ -457,10 +457,10 @@ a {
 
 
 .about-container {
-    border: 1px solid orange;
     width: 100%;
     height: 100vh;
     display: flex;
+    justify-content: center;
     position: relative;
     flex-direction: row;
     flex-wrap: wrap;
@@ -478,6 +478,7 @@ a {
             position: relative;
             display: flex;
             height: 100%;
+            margin-top: 3em;
         }
             .about hr {
                 width: 300px;
@@ -496,7 +497,28 @@ a {
                         text-align: justify;
                         padding: 10px 0;
                     }
-                
+    
+    .about-content-bottom {
+        width: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+        .about-bottom {
+            text-align: center;
+        }
+            .about-bottom img {
+                width: 50%;
+                margin: 0 auto;
+                margin-bottom: 2em;
+                position: relative;
+                padding-bottom: 2px;
+            }
+                .about-bottom p {
+                    padding: 5px 0;
+                }
 
 
 /********************************** CONTENT END **********************************/
