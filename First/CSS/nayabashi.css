@@ -427,7 +427,8 @@ a {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-right: 10px;
+        margin-right: 20px;
+        width: 100px;
     }
 
     .btn-learn:hover {
@@ -505,6 +506,7 @@ a {
         justify-content: center;
         flex-direction: row;
         flex-wrap: wrap;
+        border: 1px solid red;
     }
         .about-bottom {
             text-align: center;
@@ -520,7 +522,31 @@ a {
                     padding: 5px 0;
                 }
 
+                    .btn-join {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: var(--text-primary-color);
+                        color: var(--text-secondary-color);
+                        margin: 0 auto;
+                        margin-top: 5em;
+                        border-right: 5px solid var(--text-secondary-color);
+                        border-bottom: 5px solid var(--text-secondary-color);
+                        cursor: pointer;
+                        box-shadow: 10px 5px 5px var(--primary-color);
+                    }
 
+                        .btn-join span {
+                            width: 150px;
+                        }
+
+                        .btn-join img {
+                            width: 50px;
+                            margin: 0 auto;
+                        }
+
+
+                        
 /********************************** CONTENT END **********************************/
 
 
