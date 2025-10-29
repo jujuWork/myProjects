@@ -608,6 +608,24 @@ a {
             transform: scale(1.03);
         } */
 
+
+
+ .point-container {
+    width: 100%;
+    position: relative;
+    margin-top: 5em;
+}
+    .point-card-container {
+        border: 1px solid red;
+        width: 350px;
+        height: 450px;
+    }
+        .point-card-container img {
+            border: 1px solid blue;
+            width: 100%;
+            height: 50%;
+        }
+
 /********************************** CONTENT END **********************************/
 
 
