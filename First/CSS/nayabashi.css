@@ -465,18 +465,40 @@ a {
     flex-direction: row;
     flex-wrap: wrap;
 }
-    .about-item-background {
+    .about-item {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        background: url('../Image/About/グループ\ 56.png') no-repeat center center/cover;
         width: 100%;
         height: 50vh;
-        background: url('../Image/About/グループ\ 56.png') no-repeat center center/cover;
+        color: var(--text-secondary-color);
     }
-        .about-item {
-            border: 1px solid red;
-            /* position: absolute;
-            top: 0;
-            left: 0; */
-            color: var(--text-secondary-color);
+        .about {
+            position: relative;
+            display: flex;
+            height: 100%;
         }
+            .about hr {
+                width: 300px;
+                height: 1px;
+                margin: 60px 0 0 0;
+            }
+                .about-content {
+                    margin-left: 50px;
+                }
+                .about h2 {
+                    font-size: 96px;
+                    font-style: italic;
+                    margin-left: 5px;
+                }
+                    .about-content p {
+                        text-align: justify;
+                        padding: 10px 0;
+                    }
+                
+
+
 /********************************** CONTENT END **********************************/
 
 
