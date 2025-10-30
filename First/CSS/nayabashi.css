@@ -406,7 +406,7 @@ a {
 
 .bottom-center-hr {
     margin-top: 3em;
-    width: 50%;
+    width: 40%;
 }
 
     .btn-learn {
@@ -414,9 +414,9 @@ a {
         color: var(--text-secondary-color);
         position: absolute;
         right: 20em;
-        bottom: -2.5em;
+        bottom: -3.5em;
         display: flex;
-        padding: 0 10px;
+        padding: 8px 5px;
         border-right: 5px solid var(--text-secondary-color);
         border-bottom: 5px solid var(--text-secondary-color);
         transition: transform 0.3s ease-in-out;
@@ -432,7 +432,7 @@ a {
         width: 100px;
     }
 
-    .btn-learn:hover {
+    .btn-learn:hover, .btn-join:hover {
         transform: translateX(20px);
     }
 
@@ -530,10 +530,12 @@ a {
                         color: var(--text-secondary-color);
                         margin: 0 auto;
                         margin-top: 5em;
+                        padding: 5px 8px;
                         border-right: 5px solid var(--text-secondary-color);
                         border-bottom: 5px solid var(--text-secondary-color);
                         cursor: pointer;
                         box-shadow: 10px 5px 5px var(--primary-color);
+                        transition: 0.3s ease-in-out;
                     }
 
                         .btn-join span {
@@ -549,14 +551,16 @@ a {
     position: relative;
     margin-top: 5em;
     }
-        .point-container h2 {
+        .point-container h2,
+        .lesson-container h2 {
             font-size: 96px;
             text-align: center;
             font-style: italic;
             font-weight: 600;
         }
 
-            .point-container p {
+            .point-container p,
+            .lesson-container p {
                 text-align: center;
             }
                 .point-sub-container {
@@ -613,7 +617,32 @@ a {
 
 
 
-
+.lesson-container {
+    border: 1px solid red;
+    width: 100%;
+    position: relative;
+    margin-top: 5em;
+}
+    .lesson-image-container {
+        margin-top: 3em;
+        display: flex;
+        justify-content: center;
+        gap: 5em;
+        cursor: pointer;
+        padding: 2em 2em;
+    }
+        .lesson-image-container span {
+            transition: 0.3s ease-in-out;
+        }
+            .lesson-image-container span:hover {
+                transform: scale(1.1);
+            }
+                .lesson-image-container span > img {
+                    width: 25em;
+                }
+                    .lesson-image-grey:hover {
+                        filter: grayscale(100%);
+                    }
 
 
 /********************************** CONTENT END **********************************/
