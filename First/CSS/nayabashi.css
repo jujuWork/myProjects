@@ -22,7 +22,8 @@
     --primary-color: #333333;
     --secondary-color: #B6CEB4;
     --text-primary-color: #000;
-    --text-secondary-color: #fff;
+    --text-secondary-color: #f5f5f5;
+    --text-point-color: #A82824;
     --hover-color: #FF4944;
 }
 
@@ -543,88 +544,77 @@ a {
                             width: 50px;
                             margin: 0 auto;
                         }
-
-
-/* .point-container, 
-.lesson-container {
+.point-container {
     width: 100%;
     position: relative;
     margin-top: 5em;
-}
-    .point-card-container,
-    .lesson-card-container {
-        width: 100%;
-        height: 100%;
-        margin: 3em auto;
     }
-
-    .point-container h2,
-    .lesson-card-container h2 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        font-size: 96px;
-        font-style: italic;
-    }
-        .point-container p,
-        .lesson-card-container p {
+        .point-container h2 {
+            font-size: 96px;
             text-align: center;
-            margin-bottom: 3em;
+            font-style: italic;
+            font-weight: 600;
         }
-            .point-card-items {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                position: relative;
-                flex-direction: row;
-                flex-wrap: wrap;
-                gap: 10em;
-                margin-bottom: 5em;
+
+            .point-container p {
+                text-align: center;
             }
-                .point-card img {
-                    position: relative;
-                    background-size: cover;
-                    width: 400px;
-                    height: 450px;
-                    transition: 0.3s ease-in-out;
+                .point-sub-container {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 10em;
+                    margin-top: 3em;
+                    gap: 15em;
                 }
-                    .point-card img:hover {
-                        transform: scale(1.1);
+
+                    .point-card-container {
+                        height: 100%;
+                        position: relative;
+
                     }
-    
-.lesson-card-items {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5em;
-    cursor: pointer;
-}
-    .lesson-card img {
-        transition: 0.3s ease-in-out;
-        margin-bottom: 3em;
-    }
-        .lesson-card img:hover {
-            transform: scale(1.03);
-        } */
+                        .point-items {
+                            width: 100%;
+                            height: 100%;
+                            transition: 0.3s ease-in-out;
+                        }
+                            .point-items:hover {
+                                transform: scale(1.1);
+                            }
+                                .point-items img:first-child() {
+                                    width: 100%;
+                                    background-position: center;
+                                    background-repeat: no-repeat;
+                                    background-size: cover;
+                                }
+                                    .point-items p:nth-child(2) {
+                                        text-align: center;
+                                        margin-top: -3em;
+                                    }
+
+                        .point-content {
+                            text-align: center;
+                            position: relative;
+                        }
+                            .point-content p:first-child {
+                                font-size: 2rem;
+                                color: var(--text-point-color);
+                                font-weight: 700;
+                            }
+                                .point-content p:nth-child(2) {
+                                    font-size: 1.3rem;
+                                    font-weight: 600;
+                                }
+                                    .point-content p:nth-child(3) {
+                                        position: absolute;
+                                        text-align: justify;
+                                        margin-top: 1em;
+                                    }
 
 
 
- .point-container {
-    width: 100%;
-    position: relative;
-    margin-top: 5em;
-}
-    .point-card-container {
-        border: 1px solid red;
-        width: 350px;
-        height: 450px;
-    }
-        .point-card-container img {
-            border: 1px solid blue;
-            width: 100%;
-            height: 50%;
-        }
+
+
 
 /********************************** CONTENT END **********************************/
 
