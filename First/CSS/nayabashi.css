@@ -497,7 +497,8 @@ a {
                 }
                     .about-content p {
                         text-align: justify;
-                        padding: 10px 0;
+                        padding: 3px 0;
+                        font-size: 1.2vw;
                     }
     
     .about-content-bottom {
