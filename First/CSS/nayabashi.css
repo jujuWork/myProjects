@@ -641,9 +641,12 @@ a {
                 .lesson-image-container span > img {
                     width: 25em;
                 }
-                    .lesson-image-grey:hover {
-                        filter: grayscale(100%);
+                    .lesson-image-container span > .lesson-image-grey {
+                        width: 35em;
                     }
+                        .lesson-image-grey:hover {
+                            filter: grayscale(100%);
+                        }
 
 
 /********************************** CONTENT END **********************************/
