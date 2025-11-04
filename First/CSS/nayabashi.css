@@ -647,30 +647,31 @@ a {
                         align-items: center;
                         justify-content: center;
                         gap: 10em;
-                        opacity: 0;
-                        transform: translateX(-20px);
-                        animation: fadeInUp linear;
-                        animation-timeline: view();
-                        animation-range: entry 0% cover 30%;
                     }
-                        .lesson-image-container2 span:nth-child(2) {
-                            animation-delay: 0.15s;
+                        .lesson-image-container2 span:first-child {
+                            opacity: 0;
+                            transform: translateX(-50px);
+                            transition: opacity 0.6 ease, transform 0.8s ease;
                         }
-                            @keyframes fadeInUp {
-                                to {
+                            .lesson-image-container2 span:last-child {
+                                opacity: 0;
+                                transform: translateX(50px);
+                                transition: opacity 0.6 ease, transform 0.8s ease;
+                            }
+                                .lesson-image-container2 span.slide-in {
                                     opacity: 1;
-                                    transform: translateY(0);
+                                    transform: translateX(0);
                                 }
+
+                        .lesson-image-container2 span > .lesson-image-grey {
+                            width: 35em;
+                            background: no-repeat cover cover/center;
+                            transition: 0.3s ease-in-out;
+                        }
+                            .lesson-image-grey:hover {
+                                filter: grayscale(100%);
+                                transform: scale(1.15);
                             }
-                            .lesson-image-container2 span > .lesson-image-grey {
-                                width: 35em;
-                                background: no-repeat cover cover/center;
-                                transition: 0.3s ease-in-out;
-                            }
-                                .lesson-image-grey:hover {
-                                    filter: grayscale(100%);
-                                    transform: scale(1.15);
-                                }
 /********************************** CONTENT END **********************************/
 
 
