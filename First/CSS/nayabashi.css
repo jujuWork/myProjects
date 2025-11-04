@@ -641,14 +641,36 @@ a {
                 .lesson-image-container span > img {
                     width: 25em;
                 }
-                    .lesson-image-container span > .lesson-image-grey {
-                        width: 35em;
-                        margin: 0 50px;
-                        background: no-repeat cover cover/center;
+                    .lesson-image-container2 {
+                        border: 1px solid red;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 10em;
+                        opacity: 0;
+                        transform: translateX(-20px);
+                        animation: fadeInUp linear;
+                        animation-timeline: view();
+                        animation-range: entry 0% cover 30%;
                     }
-                        .lesson-image-grey:hover {
-                            filter: grayscale(100%);
+                        .lesson-image-container2 span:nth-child(2) {
+                            animation-delay: 0.15s;
                         }
+                            @keyframes fadeInUp {
+                                to {
+                                    opacity: 1;
+                                    transform: translateY(0);
+                                }
+                            }
+                            .lesson-image-container2 span > .lesson-image-grey {
+                                width: 35em;
+                                background: no-repeat cover cover/center;
+                                transition: 0.3s ease-in-out;
+                            }
+                                .lesson-image-grey:hover {
+                                    filter: grayscale(100%);
+                                    transform: scale(1.15);
+                                }
 /********************************** CONTENT END **********************************/
 
 
