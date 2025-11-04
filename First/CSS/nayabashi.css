@@ -643,12 +643,12 @@ a {
                 }
                     .lesson-image-container span > .lesson-image-grey {
                         width: 35em;
+                        margin: 0 50px;
+                        background: no-repeat cover cover/center;
                     }
                         .lesson-image-grey:hover {
                             filter: grayscale(100%);
                         }
-
-
 /********************************** CONTENT END **********************************/
 
 
