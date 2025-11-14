@@ -105,3 +105,46 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 });
+
+
+
+
+// INTERSECTION OBSERVER FOR ANIMATION SCROLL
+// const observer = new IntersectionObserver((entries) => {
+//   entries.forEach(entry => {
+//     if (entry.isIntersecting) {
+//       entry.target.querySelectorAll('.lesson-image-grey').forEach(img => {
+//         img.classList.add('animate');
+//       });
+//       observer.unobserve(entry.target);
+//     }
+//   });
+// }, {
+//   threshold: 1
+// });
+
+// const lessonContainer = document.querySelector('.lesson-image-container2');
+// observer.observe(lessonContainer);
+
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    // Calculate how much of the viewport height the intersection occupies
+    const intersectionHeight = entry.intersectionRect ? entry.intersectionRect.height : 0;
+    const visibleFractionOfViewport = intersectionHeight / window.innerHeight;
+
+    // Trigger only when at least 10% of the viewport height of the container is visible
+    if (entry.isIntersecting && visibleFractionOfViewport >= 0.1) {
+      entry.target.querySelectorAll('.lesson-image-grey').forEach(img => {
+        img.classList.add('animate');
+      });
+      observer.unobserve(entry.target);
+    }
+  });
+}, {
+  // include a threshold that will cause callbacks near the 10% crossing
+  threshold: [0, 0.1]
+});
+
+const lessonContainer = document.querySelector('.lesson-image-container2');
+if (lessonContainer) observer.observe(lessonContainer);
