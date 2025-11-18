@@ -1,21 +1,3 @@
-// HEADER IMAGE SLIDES (SINGLE)
-
-// var slideIndex = 0;
-// carousel();
-
-// function carousel() {
-//   var i;
-//   var x = document.getElementsByClassName("mySlides");
-//   for (i = 0; i < x.length; i++) {
-//     x[i].style.display = "none";
-//   }
-//   slideIndex++;
-//   if (slideIndex > x.length) {slideIndex = 1}
-//   x[slideIndex-1].style.display = "block";
-//   setTimeout(carousel, 5000); // Change image every 5 seconds
-// }
-
-
 // CONTENT Image CAROUSEL
 
 const container = document.getElementById('carouselContainer');
@@ -108,43 +90,32 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+// TRIGGER POINTS FOR SLIDE ANIMATION
+document.addEventListener('DOMContentLoaded', function() {
+const triggerPoints = document.getElementById('lesson-container');
+const triggerContainer = document.querySelector('.lesson-image-container2');
 
-// INTERSECTION OBSERVER FOR ANIMATION SCROLL
-// const observer = new IntersectionObserver((entries) => {
-//   entries.forEach(entry => {
-//     if (entry.isIntersecting) {
-//       entry.target.querySelectorAll('.lesson-image-grey').forEach(img => {
-//         img.classList.add('animate');
-//       });
-//       observer.unobserve(entry.target);
-//     }
-//   });
-// }, {
-//   threshold: 1
-// });
+  if (!triggerPoints || !triggerContainer) {
+    console.error('Required elements not found.');
+    return;
+  }
 
-// const lessonContainer = document.querySelector('.lesson-image-container2');
-// observer.observe(lessonContainer);
-
-
-const observer = new IntersectionObserver((entries) => {
+const observerCallback = (entries, observer) => {
   entries.forEach(entry => {
-    // Calculate how much of the viewport height the intersection occupies
-    const intersectionHeight = entry.intersectionRect ? entry.intersectionRect.height : 0;
-    const visibleFractionOfViewport = intersectionHeight / window.innerHeight;
-
-    // Trigger only when at least 10% of the viewport height of the container is visible
-    if (entry.isIntersecting && visibleFractionOfViewport >= 0.1) {
-      entry.target.querySelectorAll('.lesson-image-grey').forEach(img => {
-        img.classList.add('animate');
-      });
-      observer.unobserve(entry.target);
-    }
+    if (entry.isIntersecting) {
+      triggerContainer.classList.add('triggered-state');
+          observer.unobserve(entry.target);
+    } 
   });
-}, {
-  // include a threshold that will cause callbacks near the 10% crossing
-  threshold: [0, 0.1]
-});
+};
 
-const lessonContainer = document.querySelector('.lesson-image-container2');
-if (lessonContainer) observer.observe(lessonContainer);
+const observerOptions = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.7
+};
+
+const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+observer.observe(triggerPoints);
+});
