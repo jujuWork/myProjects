@@ -650,14 +650,30 @@ a {
     }
         .lesson-image-container2 span {
             display: inline-block;
+            transform: translateX(-100%);
+            opacity: 0;
         }
-            .lesson-image-container2 span:nth-child(1) {
+            .lesson-image-container2.triggered-state span:nth-child(1) {
                 animation: slideInFromLeft 1.5s ease-out forwards;
             }
 
-            .lesson-image-container2 span:nth-child(2) {
+            .lesson-image-container2.triggered-state span:nth-child(2) {
                 animation: slideInFromRight 1.5s ease-out forwards;
             }
+
+            .lesson-image-container2 span:nth-child(2) {
+                transform: translateX(100%);
+            }
+
+                .lesson-image-container2 span > img {
+                    transition: 0.3s ease-in-out;
+                    cursor: pointer;
+                }
+
+                .lesson-image-container2 span > img:hover {
+                    filter: grayscale();
+                    transform: scale(1.05);
+                }
 
 @keyframes slideInFromLeft {
     from {
