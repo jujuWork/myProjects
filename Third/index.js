@@ -1,55 +1,33 @@
-// Get the elements we need to animate
-const caseSection = document.getElementById("caseSection");
-const caseBackground = document.getElementById("caseBackground");
-const carouselWrapper = document.getElementById("carouselWrapper");
+// VERTICAL SCROLLING FOR BACKGROUND
 
-// Listen for scroll events
-window.addEventListener("scroll", function () {
-  // Get the position of the case section
-  const sectionTop = caseSection.offsetTop;
-  const sectionHeight = caseSection.offsetHeight;
+// const img2 = document.querySelectorAll(".main__img")[1];
 
-  // Get current scroll position
-  const scrollPosition = window.scrollY;
-  console.log(scrollPosition);
+// window.addEventListener("scroll", () => {
+//   const scrolled = window.pageYOffset;
+//   const maxScroll = document.body.scrollHeight - window.innerHeight;
+//   const scrollPercent = scrolled / maxScroll;
 
-  // Calculate how far we've scrolled into the section
-  // This gives us a value from 0 to sectionHeight
-  const scrollIntoSection = scrollPosition - sectionTop;
+//   // Move second image from bottom (100%) to top (0%)
+//   const translateY = 100 - scrollPercent * 100;
+//   img2.style.transform = `translateY(-${100 - translateY}%)`;
+// });
 
-  // Only animate when we're in the section area
-  if (scrollIntoSection >= 0 && scrollIntoSection <= sectionHeight) {
-    // Calculate progress (0 to 1)
-    // 0 = just entered section, 1 = reached bottom of section
-    const progress = scrollIntoSection / sectionHeight;
+const img2 = document.querySelectorAll(".main__img")[1];
+const carouselWrapper = document.querySelector(".case__carousel-wrapper");
+const carouselSwiper = document.querySelector(".case__carousel-swiper");
 
-    // --- Background Parallax Effect ---
-    // Move background up as we scroll down
-    // Multiply by 300 to control speed (adjust this number for faster/slower)
-    const backgroundMove = progress * 300;
-    caseBackground.style.transform = `translateY(-${backgroundMove}px)`;
+window.addEventListener("scroll", () => {
+  const scrolled = window.pageYOffset;
+  const maxScroll = document.body.scrollHeight - window.innerHeight;
+  const scrollPercent = scrolled / maxScroll;
 
-    // --- Carousel Scroll Effect ---
-    // Move carousel to the left as we scroll down
-    // We want images to move from center to left
-    // Starting position: centered (showing first 3 images)
-    // Ending position: 5th image on the right
+  // Move second image from bottom (100%) to top (0%)
+  const translateY = 100 - scrollPercent * 100;
+  img2.style.transform = `translateY(-${100 - translateY}%)`;
 
-    // Calculate how much to move
-    // Multiply by 800 to control distance (adjust based on your needs)
-    const carouselMove = progress * 800;
-    carouselWrapper.style.transform = `translateX(-${carouselMove}px)`;
-  }
-
-  // If we scroll past the section, keep final position
-  if (scrollIntoSection > sectionHeight) {
-    caseBackground.style.transform = `translateY(-300px)`;
-    carouselWrapper.style.transform = `translateX(-800px)`;
-  }
-
-  // If we scroll before the section, reset to initial position
-  if (scrollIntoSection < 0) {
-    caseBackground.style.transform = `translateY(0)`;
-    carouselWrapper.style.transform = `translateX(0)`;
-  }
+  // Horizontal scroll for carousel
+  const carouselWidth =
+    carouselSwiper.scrollWidth - carouselWrapper.offsetWidth;
+  const horizontalScroll = scrollPercent * carouselWidth;
+  carouselSwiper.style.transform = `translateX(-${horizontalScroll}px)`;
 });
