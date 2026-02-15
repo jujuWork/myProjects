@@ -12,8 +12,8 @@ window.addEventListener("scroll", () => {
   img2.style.transform = `translateY(-${100 - translateY}%)`;
 
   // Horizontal scroll for carousel
-  const carouselWidth =
-    carouselSwiper.scrollWidth - carouselWrapper.offsetWidth;
-  const horizontalScroll = scrollPercent * carouselWidth;
-  carouselSwiper.style.transform = `translateX(-${horizontalScroll}px)`;
+  // const carouselWidth =
+  //   carouselSwiper.scrollWidth - carouselWrapper.offsetWidth;
+  // const horizontalScroll = scrollPercent * carouselWidth;
+  // carouselSwiper.style.transform = `translateX(-${horizontalScroll}px)`;
 });
