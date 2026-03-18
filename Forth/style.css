@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  width: 100%;
+  max-width: 1366px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+}
+
+.voice__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+.voice__item {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  margin-top: 50px;
+}
+
+.voice__item:nth-child(1) {
+  border: 1px solid red;
+}
+
+h3 {
+  font-size: 40px;
+}
