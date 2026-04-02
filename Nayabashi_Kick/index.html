@@ -1,0 +1,759 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      納屋橋キック- 名古屋駅・伏見駅から徒歩10分のキックボクシングジム
+    </title>
+    <meta
+      name="description"
+      content="名古屋駅・伏見駅より約10分の徒歩圏内の納屋橋エリア唯一のキックボクシングジムです。名古屋最安！常設リング、綺麗なシャワー付き更衣室を完備。女性にも通いやすい女性限定クラスもあります。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"
+      defer
+    ></script>
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <main class="main">
+      <div class="layout">
+        <!-- メインビジュアル -->
+        <section class="hero">
+          <!-- SPヒーロー（1枚固定） -->
+          <picture class="hero__image--sp">
+            <source srcset="images/hero--sp.webp" type="image/webp" />
+            <img
+              src="images/hero--sp.webp"
+              alt="女性会員がトレーナーと笑顔でミット打ちを行うキックボクシング指導風景"
+              width="376"
+              height="545"
+            />
+          </picture>
+          <!-- PCヒーロースライダー -->
+          <picture class="hero__image hero__image--active">
+            <source srcset="images/hero1.webp" type="image/webp" />
+            <img
+              src="images/hero1.webp"
+              alt="男性会員がミットに向かってパンチを打つキックボクシングトレーニング風景"
+              width="2560"
+              height="1424"
+            />
+          </picture>
+          <picture class="hero__image">
+            <source srcset="images/hero2.webp" type="image/webp" />
+            <img
+              src="images/hero2.webp"
+              alt="笑顔の女性2人がボクシンググローブを構えるキックボクシングジムのイメージ"
+              width="2560"
+              height="1424"
+            />
+          </picture>
+          <picture class="hero__image">
+            <source srcset="images/hero3.webp" type="image/webp" />
+            <img
+              src="images/hero3.webp"
+              alt="女性会員がミットにハイキックを打つキックボクシングトレーニング風景"
+              width="2560"
+              height="1424"
+            />
+          </picture>
+          <picture class="hero__logo-official">
+            <source srcset="images/official-logo.webp" type="image/webp" />
+            <img
+              src="images/official-logo.webp"
+              alt="K-1アマチュア公認ジムロゴ"
+              width="66"
+              height="66"
+              loading="lazy"
+            />
+          </picture>
+          <a href="https://page.line.me/098hqktu">
+            <picture class="hero__cta">
+              <source
+                srcset="images/line-trial-reservation.webp"
+                type="image/webp"
+              />
+              <img
+                src="images/line-trial-reservation.webp"
+                alt="体験予約のお申し込みはこちら"
+                width="220"
+                height="75"
+                loading="lazy"
+              />
+            </picture>
+          </a>
+          <div class="hero__logo-rotation">
+            <h1 class="hero__title">
+              <picture class="hero__title-img">
+                <source srcset="images/rotation-msg.webp" type="image/webp" />
+                <img
+                  src="images/rotation-msg.webp"
+                  alt="K-1 AMATEUR GYM NAYABASHI KICK"
+                  width="96"
+                  height="96"
+                  loading="lazy"
+                  class="spin"
+                />
+              </picture>
+            </h1>
+            <picture class="hero__logo-main">
+              <source srcset="images/main-logo.webp" type="image/webp" />
+              <img
+                src="images/main-logo.webp"
+                alt="納屋橋キックのロゴ"
+                width="96"
+                height="96"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+          <picture class="hero__catchcopy">
+            <source srcset="images/catchcopy.webp" type="image/webp" />
+            <img
+              src="images/catchcopy.webp"
+              alt="名古屋最安値、24時間利用可能というキャッチコピーと、スタッフ在籍時間以外は無人となりますという注意書き"
+              width="211"
+              height="143"
+              loading="lazy"
+            />
+          </picture>
+          <div class="hero__scroll-text">
+            <picture class="hero__scroll-img">
+              <source srcset="images/scroll-text--sp.webp" type="image/webp" />
+              <img
+                src="images/scroll-text--sp.webp"
+                alt="FOCUS YOUR BODY WITH US!! STRONG BODY STRONG MINDというテキスト"
+                width="1250"
+                height="63"
+                loading="lazy"
+              />
+            </picture>
+            <picture class="hero__scroll-img">
+              <source srcset="images/scroll-text--sp.webp" type="image/webp" />
+              <img
+                src="images/scroll-text--sp.webp"
+                alt="FOCUS YOUR BODY WITH US!! STRONG BODY STRONG MINDというテキスト"
+                width="1066"
+                height="54"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+          <picture class="hero__arrangement">
+            <source srcset="images/hero__arrangement.webp" type="image/webp" />
+            <img
+              src="images/hero__arrangement.webp"
+              alt="LINEから体験予約のお申込みはこちら"
+              width="675"
+              height="21"
+              loading="lazy"
+            />
+          </picture>
+        </section>
+        <!-- カルーセルバナー -->
+        <section class="carousel-banner">
+          <div class="swiper carousel-banner__swiper" data-js="banner-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="#">
+                  <picture class="carousel-banner__img">
+                    <source
+                      srcset="images/spring-campaign-nayabashi-banner.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      src="images/spring-campaign-nayabashi-banner.webp"
+                      alt="春のキャンペーンのバナー"
+                      width="2048"
+                      height="1024"
+                      loading="lazy"
+                    />
+                  </picture>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a
+                  href="https://nayabashi-kick.com/heat%e3%83%81%e3%83%a3%e3%83%b3%e3%83%94%e3%82%aa%e3%83%b3%e5%ae%89%e5%b7%9d%e4%be%91%e5%b7%b1%e9%81%b8%e6%89%8b%e3%81%8c%e7%b4%8d%e5%b1%8b%e6%a9%8b%e3%82%ad%e3%83%83%e3%82%af%e3%81%ab%e7%a7%bb/"
+                >
+                  <picture class="carousel-banner__img">
+                    <source
+                      srcset="images/yuki-yasukawa-transfer.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      src="images/yuki-yasukawa-transfer.webp"
+                      alt="HEATチャンピオン 安川侑己選手が納屋橋キックに移籍しました！"
+                      width="2048"
+                      height="1024"
+                      loading="lazy"
+                    />
+                  </picture>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="https://nayabashi-kick.com/akerun/">
+                  <picture class="carousel-banner__img">
+                    <source
+                      srcset="images/gym-24hour-availability-banner.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      src="images/gym-24hour-availability-banner.webp"
+                      alt="ジム利用が24時間利用可能になったというバナー"
+                      width="2048"
+                      height="1024"
+                      loading="lazy"
+                    />
+                  </picture>
+                </a>
+              </div>
+            </div>
+            <!-- ナビゲーションボタン -->
+            <div class="carousel-banner__button-prev"></div>
+            <div class="carousel-banner__button-next"></div>
+          </div>
+          <!-- ドット用 -->
+          <div class="carousel-banner__pagination"></div>
+        </section>
+        <!-- お知らせ -->
+        <section class="news">
+          <hr class="news__divider news__divider--bold" />
+          <hr class="news__divider" />
+          <div class="news__body">
+            <h2 class="news__title">news</h2>
+            <div class="news__list" data-js="fade">
+              <article class="news__item">
+                <time class="news__date" datetime="2026-02-02">2026.02.02</time>
+                <h3 class="news__heading">
+                  <a class="news__link" href="#"
+                    >K-1アマチュア大阪大会　大阪エディオンアリーナに7名出場しました。</a
+                  >
+                </h3>
+              </article>
+              <article class="news__item">
+                <time class="news__date" datetime="2026-01-15">2026.01.15</time>
+                <h3 class="news__heading">
+                  <a class="news__link" href="#"
+                    >会員様向けキャンペーンのお知らせ</a
+                  >
+                </h3>
+              </article>
+              <article class="news__item">
+                <time class="news__date" datetime="2026-01-12">2026.01.12</time>
+                <h3 class="news__heading">
+                  <a class="news__link" href="#"
+                    >お年玉キャンペーン実施のお知らせ</a
+                  >
+                </h3>
+              </article>
+              <article class="news__item">
+                <time class="news__date" datetime="2025-12-29">2025.12.29</time>
+                <h3 class="news__heading">
+                  <a class="news__link" href="#"
+                    >【試合結果】グループエスカラデーPRESENTS HOOST CUP KINGS
+                    NAGOYA18</a
+                  >
+                </h3>
+              </article>
+              <article class="news__item">
+                <time class="news__date" datetime="2025-12-22">2025.12.22</time>
+                <h3 class="news__heading">
+                  <a class="news__link" href="#"
+                    >【那古野キック】年末年始営業のお知らせ</a
+                  >
+                </h3>
+              </article>
+            </div>
+            <div class="news__action">
+              <a
+                class="news__button"
+                href="https://nayabashi-kick.com/information/"
+              >
+                <picture class="news__button-image">
+                  <img
+                    src="images/btn-more.webp"
+                    alt="ニュース一覧を詳しく見る"
+                    width="550"
+                    height="190"
+                    loading="lazy"
+                  />
+                </picture>
+              </a>
+            </div>
+          </div>
+          <hr class="news__divider news__divider--bold" />
+          <hr class="news__divider" />
+        </section>
+        <!-- バナー -->
+        <section class="banner">
+          <a href="https://sponago.com/saiyou/requirement/" target="_blank">
+            <picture
+              class="banner__image banner__image--primary"
+              data-js="slide-image"
+            >
+              <source
+                srcset="images/banner-pro-support-recruit.webp"
+                type="image/webp"
+              />
+              <img
+                src="images/banner-pro-support-recruit.webp"
+                alt="プロ選手を全力サポート。プロを目指しながら働けるスタッフ募集のお知らせ"
+                width="516"
+                height="354"
+                loading="lazy"
+              />
+            </picture>
+          </a>
+          <a href="https://nayabashi-kick.com/join/" target="_blank">
+            <picture
+              class="banner__image banner__image--secondary"
+              data-js="slide-image"
+            >
+              <source
+                srcset="images/banner-transfer-campaign-free.webp"
+                type="image/webp"
+              />
+              <img
+                src="images/banner-transfer-campaign-free.webp"
+                alt="のりかえ割キャンペーン。入会金と1か月分の会費が無料のお知らせ"
+                width="500"
+                height="300"
+                loading="lazy"
+              />
+            </picture>
+          </a>
+        </section>
+        <!-- テキストマスク -->
+        <section class="text-mask">
+          <div class="swiper" data-js="text-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <picture class="text-mask__image">
+                  <source srcset="images/text-mask1.webp" type="image/webp" />
+                  <img
+                    src="images/text-mask1.webp"
+                    alt="トレーナーが女性会員にストレッチ指導を行っている様子"
+                    width="1774"
+                    height="743"
+                    loading="lazy"
+                  />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture class="text-mask__image">
+                  <source srcset="images/text-mask2.webp" type="image/webp" />
+                  <img
+                    src="images/text-mask2.webp"
+                    alt="キックボクシングジムで複数の会員がミット打ちやトレーニングを行っている様子"
+                    width="1774"
+                    height="743"
+                    loading="lazy"
+                  />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture class="text-mask__image">
+                  <source srcset="images/text-mask3.webp" type="image/webp" />
+                  <img
+                    src="images/text-mask3.webp"
+                    alt="キックボクシングジムで女性会員がトレーナーのミットにキックをしている様子"
+                    width="1774"
+                    height="743"
+                    loading="lazy"
+                  />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture class="text-mask__image">
+                  <source srcset="images/text-mask4.webp" type="image/webp" />
+                  <img
+                    src="images/text-mask4.webp"
+                    alt="ボクシングジムのリング内で、男性トレーナーが構えるミットに向かって女性がパンチを打ち込んでいるトレーニング風景"
+                    width="1774"
+                    height="743"
+                    loading="lazy"
+                  />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture class="text-mask__image">
+                  <source srcset="images/text-mask5.webp" type="image/webp" />
+                  <img
+                    src="images/text-mask5.webp"
+                    alt="ボクシングジムにて、ミットを持った男性トレーナーとグローブをはめた女性が笑顔で並んでいる様子"
+                    width="1774"
+                    height="743"
+                    loading="lazy"
+                  />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture class="text-mask__image">
+                  <source srcset="images/text-mask6.webp" type="image/webp" />
+                  <img
+                    src="images/text-mask6.webp"
+                    alt="オレンジ色のグローブをつけた女性がトレーナーのミットに右ミドルキックを打ち込んでいる様子"
+                    width="1774"
+                    height="743"
+                    loading="lazy"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ジムの紹介・コンセプト -->
+        <section class="about">
+          <div class="about__header">
+            <h2 class="about__title">about</h2>
+            <p class="about__text" data-js="fade">
+              名古屋駅・伏見駅より約10分の徒歩圏内の<br
+                class="about__br"
+              />納屋橋エリア唯一のキックボクシングジムです。<br />常設リング、綺麗なシャワー付き更衣室を完備。<br />キックボクシングは、ハードなイメージがあるかもしれませんが、<br
+                class="about__br"
+              />実は女性や中高年の方にもオススメのスポーツです。<br />多様なレッスンを通じて心身ともに健康を目指しています。
+            </p>
+          </div>
+          <div class="about__content">
+            <picture class="about__image">
+              <source
+                srcset="images/about-training-kick.webp"
+                type="image/webp"
+              />
+              <img
+                src="images/about-training-kick.webp"
+                alt="女性がトレーナーのミットにハイキックをしているキックボクシングの練習風景"
+                width="622"
+                height="710"
+                loading="lazy"
+              />
+            </picture>
+            <picture class="about__text-image">
+              <source srcset="images/about-lead-text.webp" type="image/webp" />
+              <img
+                src="images/about-lead-text.webp"
+                alt="はじめてのキックボクシングジムとしても気軽にチャレンジできる"
+                width="388"
+                height="88"
+                loading="lazy"
+              />
+            </picture>
+            <p class="about__description">
+              ダイエット、美容（若返り）、肩こりや腰痛の軽減、ストレス発散、大会出場など<br />さまざまな目的を持った会員様に幅広いトレーニングを提供してきた私たち。<br />食生活やトレーニングに対するアドバイスもしています。<br />女性でも通いやすい女性限定クラスもあり、綺麗なシャワー付き更衣室を完備しています。<br />キックボクシングパーソナルトレーニングもあるので個人レッスン希望の方もお待ちしてます。
+            </p>
+            <a href="https://nayabashi-kick.com/join/" target="_blank">
+              <picture class="about__entry-btn">
+                <source
+                  srcset="images/btn-membership-entry.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="images/btn-membership-entry.webp"
+                  alt="入会ページへ移動"
+                  width="375"
+                  height="133"
+                  loading="lazy"
+                />
+              </picture>
+            </a>
+          </div>
+        </section>
+        <!-- 選ばれる6つのポイント -->
+        <section class="point">
+          <h2 class="point__title">point</h2>
+          <p class="point__subtitle">
+            納屋橋キックが選ばれる<br class="point__br" />6つのポイント
+          </p>
+          <div class="swiper point__swiper" data-js="point-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <picture class="point__image">
+                  <img
+                    src="images/point__card1.webp"
+                    alt="会費が名古屋最安!"
+                    width="600"
+                    height="890"
+                    loading="lazy"
+                  />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture class="point__image">
+                  <img
+                    src="images/point__card2.webp"
+                    alt="ビギナー向けクラス!"
+                    width="600"
+                    height="890"
+                    loading="lazy"
+                  />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture class="point__image">
+                  <img
+                    src="images/point__card3.webp"
+                    alt="女性限定クラス!"
+                    width="600"
+                    height="890"
+                    loading="lazy"
+                  />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture class="point__image">
+                  <img
+                    src="images/point__card4.webp"
+                    alt="プロを目指す方向向けのレッスンも自信あり"
+                    width="600"
+                    height="890"
+                    loading="lazy"
+                  />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture class="point__image">
+                  <img
+                    src="images/point__card5.webp"
+                    alt="設備が新しく清潔!"
+                    width="600"
+                    height="890"
+                    loading="lazy"
+                  />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture class="point__image">
+                  <img
+                    src="images/point__card6.webp"
+                    alt="パーソナルレッスンがおすすめ!"
+                    width="600"
+                    height="890"
+                    loading="lazy"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+          <div class="point__list">
+            <div class="point__item">
+              <picture class="point__image">
+                <img
+                  src="images/point__card1--pc.webp"
+                  alt="笑顔でカウンセリングを行う女性スタッフ"
+                  width="930"
+                  height="680"
+                  loading="lazy"
+                />
+              </picture>
+              <h3 class="point__item-title">low priced</h3>
+              <p class="point__catch">会費が名古屋最安！</p>
+              <p class="point__description">
+                一般会員は月額9,000円（税別）、女性会員は月額7,000円（税別）なんと学生は、5,000円（税別）で通い放題！
+                地域最安値で、プロのコーチのレッスンが受けられます。
+              </p>
+            </div>
+            <div class="point__item">
+              <picture class="point__image">
+                <img
+                  src="images/point__card2--pc.webp"
+                  alt="トレーナーからボクシンググローブの構え方の指導を受ける女"
+                  width="930"
+                  height="680"
+                  loading="lazy"
+                />
+              </picture>
+              <h3 class="point__item-title">for beginners</h3>
+              <p class="point__catch">ビギナー向けクラス！</p>
+              <p class="point__description">
+                パンチやキックでストレス発散したいけど、ちょっと怖いな…と思っている方、必見！納屋橋キックでは、初心者クラスがあるので個々のレベルにあった指導が受けられます。
+              </p>
+            </div>
+            <div class="point__item">
+              <picture class="point__image">
+                <img
+                  src="images/point__card3--pc.webp"
+                  alt="シャンプーなどのアメニティが完備された清潔なシャワールーム"
+                  width="930"
+                  height="680"
+                  loading="lazy"
+                />
+              </picture>
+              <h3 class="point__item-title">for women</h3>
+              <p class="point__catch">女性限定クラス！</p>
+              <p class="point__description">
+                女性会員だけが参加できるクラスもあります！日々のストレス発散や美容、健康維持のためにも、ぜひ汗を流しに来てください。シャワールームも完備してお待ちしております。
+              </p>
+            </div>
+            <div class="point__item">
+              <picture class="point__image">
+                <img
+                  src="images/point__card4--pc.webp"
+                  alt="キックミットを構えて丁寧に指導する男性トレーナー"
+                  width="930"
+                  height="680"
+                  loading="lazy"
+                />
+              </picture>
+              <h3 class="point__item-title">advanced lesson</h3>
+              <p class="point__catch">
+                プロを目指す方向けのレッスンも自信あり！！
+              </p>
+              <p class="point__description">
+                国内外で活躍する有名選手から直接指導！常設リングはもちろん、集中できる充実した環境があなたの成長をサポートします。プロや試合に出ることを目指す方もいます！
+              </p>
+            </div>
+            <div class="point__item">
+              <picture class="point__image">
+                <img
+                  src="images/point__card5--pc.webp"
+                  alt="トレーニング用のグローブやミットが整理された広々としたジムの内観"
+                  width="930"
+                  height="680"
+                  loading="lazy"
+                />
+              </picture>
+              <h3 class="point__item-title">always clean</h3>
+              <p class="point__catch">設備が新しく清潔！</p>
+              <p class="point__description">
+                設備や道具が清掃・アルコール消毒等の感染症対策もしっかり心掛け、皆様をお迎えいたします。
+                綺麗なスタジオをぜひ体験・見学にお越しください！
+              </p>
+            </div>
+            <div class="point__item">
+              <picture class="point__image">
+                <img
+                  src="images/point__card6--pc.webp"
+                  alt="リングの上でトレーナーを相手にミット打ちのトレーニングをする女性"
+                  width="930"
+                  height="680"
+                  loading="lazy"
+                />
+              </picture>
+              <h3 class="point__item-title">personal training</h3>
+              <p class="point__catch">パーソナルトレーニングがおすすめ！</p>
+              <p class="point__description">
+                キックボクシングパーソナルトレーニングもあるので個人レッスン希望の方もお待ちしてます。持続可能”かつ“本質的”なパーソナルトレーニングを目指しています。
+              </p>
+            </div>
+          </div>
+          <!-- ドット用 -->
+          <div class="point__pagination"></div>
+        </section>
+        <!-- レッスンコース -->
+        <section class="lesson">
+          <h2 class="lesson__title">lesson</h2>
+          <p class="lesson__subtitle">
+            若者から還暦過ぎても楽しめる<br
+              class="lesson__br"
+            />充実のレッスンコース。
+          </p>
+          <div class="lesson__list">
+            <a href="https://nayabashi-kick.com/facility/#schedule">
+              <picture class="lesson__image lesson__image--left">
+                <img
+                  src="images/basic-lesson.webp"
+                  alt="ベーシックレッスン"
+                  width="280"
+                  height="280"
+                  loading="lazy"
+                />
+              </picture>
+            </a>
+            <a href="https://nayabashi-kick.com/personal/">
+              <picture class="lesson__image lesson__image--right">
+                <img
+                  src="images/personal-lesson.webp"
+                  alt="パーソナルレッスン"
+                  width="280"
+                  height="280"
+                  loading="lazy"
+                />
+              </picture>
+            </a>
+          </div>
+        </section>
+        <!-- トレーナーの紹介 -->
+        <section class="trainers">
+          <picture class="trainers__image">
+            <source
+              srcset="images/trainers--pc.webp"
+              media="(min-width: 768px)"
+              type="image/webp"
+            />
+            <img
+              src="images/trainers--sp.webp"
+              alt="ボクシンググローブをはめたトレーナーのビジュアル：トレーナーを見る"
+              width="730"
+              height="1200"
+              loading="lazy"
+            />
+          </picture>
+          <div class="trainers__button">
+            <a href="https://nayabashi-kick.com/trainer/">
+              <picture class="trainers__button-image">
+                <img
+                  src="images/btn-more.webp"
+                  alt="トレーナー一覧を詳しく見る"
+                  width="550"
+                  height="190"
+                  loading="lazy"
+                />
+              </picture>
+            </a>
+          </div>
+        </section>
+        <!-- スケジュール -->
+        <section class="schedule">
+          <picture class="schedule__image">
+            <source
+              srcset="images/schedule--pc.webp"
+              media="(min-width: 768px)"
+              type="image/webp"
+            />
+            <img
+              src="images/schedule--sp.webp"
+              alt="ボクシンググローブをはめたトレーナーのビジュアル：トレーナーを見る"
+              width="730"
+              height="1200"
+              loading="lazy"
+            />
+          </picture>
+          <div class="schedule__button">
+            <a href="https://nayabashi-kick.com/facility/#schedule">
+              <picture class="schedule__button-image">
+                <img
+                  src="images/btn-more.webp"
+                  alt="スケジュールを詳しく見る"
+                  width="550"
+                  height="190"
+                  loading="lazy"
+                />
+              </picture>
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
